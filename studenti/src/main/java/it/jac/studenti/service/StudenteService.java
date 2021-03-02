@@ -16,7 +16,7 @@ public class StudenteService {
 	@Autowired
 	StudenteRepository studenteRepository;
 	
-	final static String error = "Nessun customer trovato.";
+	final static String error = "Nessun studente trovato.";
 	
 	//CREATE
 	public Response<Studente> createStudent(Studente studente) {
