@@ -21,6 +21,7 @@ public class ClasseDto {
 	
 	private int idclasse;
 	
+	
 	private String nome;
 	
 	private int capienza;

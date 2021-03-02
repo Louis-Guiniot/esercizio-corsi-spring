@@ -22,6 +22,7 @@ public class StudenteDto {
 	
 	private int idstudente;
 	
+	
 	private String nome;
 	
 	private String cognome;

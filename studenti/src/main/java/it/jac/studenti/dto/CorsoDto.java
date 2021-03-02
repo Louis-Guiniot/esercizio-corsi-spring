@@ -21,6 +21,7 @@ public class CorsoDto {
 	
 	private int idcorso;
 	
+	
 	private String titolo;
 	
 	private String descrizione;
