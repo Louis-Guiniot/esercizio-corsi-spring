@@ -54,10 +54,7 @@ public class StudentiRestController {
 		return studentiService.updateStudent(s);
 	}
 	
-	@PostMapping(path="/findAll")
-	public Response<?> findAllStudents(){
-		return studentiService.findAll();
-	}
+	
 	
 	@PostMapping(path="/findStudentById")
 	public Response<?> findStudentById(String id){

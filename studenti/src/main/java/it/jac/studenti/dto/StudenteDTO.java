@@ -11,25 +11,29 @@ import javax.persistence.Table;
 
 import org.springframework.beans.BeanUtils;
 
-
 import it.jac.studenti.entity.Classe;
+import it.jac.studenti.entity.Studente;
 import lombok.Data;
 
 @Data
 
-public class ClasseDto {
+public class StudenteDTO {
 	
-	private int idclasse;
+	
+	private int idstudente;
 	
 	private String nome;
 	
-	private int capienza;
+	private String cognome;
 	
+	private Date datanascita;
 	
-	public static ClasseDto build(Classe classe) {
+	private String sesso;
+	
+	public static StudenteDTO build(Studente studente) {
 
-		ClasseDto result = new ClasseDto();
-		BeanUtils.copyProperties(classe, result);
+		StudenteDTO result = new StudenteDTO();
+		BeanUtils.copyProperties(studente, result);
 
 		return result;
 	}
