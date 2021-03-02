@@ -1,8 +1,11 @@
 package it.jac.studenti.service;
 
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
 import it.jac.studenti.dao.StudenteRepository;
 import it.jac.studenti.dto.Response;
 import it.jac.studenti.dto.StudenteDTO;
@@ -75,5 +78,64 @@ public class StudenteService {
 				}
 
 				return response;
+			}
+			
+			
+	
+			
+			//FIND STUDENT BY ID
+			public Response<StudenteDTO> findStudentById(int id) {
+
+				Response<StudenteDTO> response = new Response<StudenteDTO>();
+
+				try {
+
+					Studente studente = this.studenteRepository.findById(id).get();
+
+					response.setResult(StudenteDTO.build(studente));
+					response.setResultTest(true);
+
+				} catch (Exception e) {
+
+					response.setError(error);
+
+				}
+
+				return response;
+
+			}
+			
+			
+			
+			
+			// FIND ALL
+			public Response<List<StudenteDTO>> findAllStudents() {
+
+				Response<List<StudenteDTO>> response = new Response<List<StudenteDTO>>();
+
+				List<StudenteDTO> result = new ArrayList<>();
+
+				try {
+
+					Iterator<Studente> iterator = this.studenteRepository.findAll().iterator();
+
+					while (iterator.hasNext()) {
+
+						Studente studente = iterator.next();
+						result.add(StudenteDTO.build(studente));
+
+					}
+
+					response.setResult(result);
+					response.setResultTest(true);
+
+				} catch (Exception e) {
+
+					response.setError(error);
+
+				}
+
+				return response;
+
 			}
 }
