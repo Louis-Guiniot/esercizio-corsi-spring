@@ -20,7 +20,7 @@ public class StudentiRestController {
 	private static Logger log = LoggerFactory.getLogger(StudentiRestController.class);
 	
 	@Autowired
-	StudentiService studentiService;
+	StudenteService studentiService;
 	
 	@GetMapping(path = "/findAll")
 	public Response<?> findAllStudents() {
