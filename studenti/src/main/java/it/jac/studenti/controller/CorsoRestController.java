@@ -10,9 +10,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import it.jac.studenti.dto.Response;
-import it.jac.studenti.entity.Classe;
 import it.jac.studenti.entity.Corso;
-import it.jac.studenti.service.ClasseService;
 import it.jac.studenti.service.CorsoService;
 
 
