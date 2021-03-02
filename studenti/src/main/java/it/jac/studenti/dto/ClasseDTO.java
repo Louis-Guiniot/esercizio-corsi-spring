@@ -17,7 +17,7 @@ import lombok.Data;
 
 @Data
 
-public class ClasseDto {
+public class ClasseDTO {
 	
 	private int idclasse;
 	
@@ -27,9 +27,9 @@ public class ClasseDto {
 	private int capienza;
 	
 	
-	public static ClasseDto build(Classe classe) {
+	public static ClasseDTO build(Classe classe) {
 
-		ClasseDto result = new ClasseDto();
+		ClasseDTO result = new ClasseDTO();
 		BeanUtils.copyProperties(classe, result);
 
 		return result;

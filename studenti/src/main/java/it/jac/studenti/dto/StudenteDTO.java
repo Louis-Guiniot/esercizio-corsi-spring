@@ -17,7 +17,7 @@ import lombok.Data;
 
 @Data
 
-public class StudenteDto {
+public class StudenteDTO {
 	
 	
 	private int idstudente;
@@ -31,9 +31,9 @@ public class StudenteDto {
 	
 	private String sesso;
 	
-	public static StudenteDto build(Studente studente) {
+	public static StudenteDTO build(Studente studente) {
 
-		StudenteDto result = new StudenteDto();
+		StudenteDTO result = new StudenteDTO();
 		BeanUtils.copyProperties(studente, result);
 
 		return result;

@@ -7,10 +7,9 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import it.jac.studenti.dao.CorsoRepository;
-import it.jac.studenti.dao.StudenteRepository;
+import it.jac.studenti.dto.CorsoDTO;
 import it.jac.studenti.dto.Response;
 import it.jac.studenti.entity.Corso;
-import it.jac.studenti.entity.Studente;
 
 public class CorsoService {
 	
