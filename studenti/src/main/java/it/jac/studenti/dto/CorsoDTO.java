@@ -17,7 +17,7 @@ import lombok.Data;
 
 @Data
 
-public class CorsoDto {
+public class CorsoDTO {
 	
 	private int idcorso;
 	
@@ -28,9 +28,9 @@ public class CorsoDto {
 	private int classe_idclasse;
 	
 	
-	public static CorsoDto build(Corso corso) {
+	public static CorsoDTO build(Corso corso) {
 
-		CorsoDto result = new CorsoDto();
+		CorsoDTO result = new CorsoDTO();
 		BeanUtils.copyProperties(corso, result);
 
 		return result;
